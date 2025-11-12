@@ -86,3 +86,23 @@ ________________________________________________________________________________
 ## Apoie o Projeto
 
 A Lucida-Flow é um projeto independente e de código aberto. Se você gosta da linguagem e quer ver o seu desenvolvimento continuar, considere [tornar-se um patrocinador no GitHub Sponsors](https://github.com/sponsors/marconeed)! O seu apoio é fundamental para a manutenção e evolução do projeto.
+
+_____________________________________________________________________________________________________________________________________________________________________________
+
+# MarcoDB v1.0.0
+
+Bem-vindo ao MarcoDB, um motor de banco de dados Chave-Valor (B+ Tree) leve e persistente, escrito inteiramente em Python.
+
+Este projeto foi construído do zero como um exercício prático de ciência da computação.
+
+## O Que é Isto?
+
+* **`btree.py`**: O motor principal da B+ Tree (CRUD, Splits, Merges).
+* **`pager.py`**: O gerenciador de páginas de 4KB.
+* **`serialization.py`**: O tradutor de bytes.
+* **`gui.py`**: Uma interface gráfica (GUI) em Tkinter.
+* **`shell_interativo.py`**: Um shell interativo para a linguagem MQL.
+
+## Aviso
+
+Este é um projeto educacional e não é recomendado para uso em produção (não possui ACID ou concorrência).
