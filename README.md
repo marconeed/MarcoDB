@@ -2,7 +2,7 @@
 
 [Projetos Práticos com MarcoDB](https://www.amazon.com.br/dp/B0G1NJ3BKC)
 
-[MarcoDB - pypi org](https://pypi.org/project/lucidaflow)
+[MarcoDB - pypi org](https://pypi.org/project/marcodb/)
 
 [MarcoDB - GitHub](https://github.com/marconeed/MarcoDB)
 
