@@ -1,8 +1,6 @@
-[Volume 1: O Manual de Referência](https://www.amazon.com.br/dp/B0FJ1HYJN8)
+[MarcoDB (O Manual)](https://www.amazon.com.br/dp/B0FRYP8P7C)
 
-[Volume 2: Construindo Aplicações Gráficas](https://www.amazon.com.br/dp/B0FLJ8PNYJ)
-
-[Lucida-Flow Support - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SoteroApps.lucidaflow-support)
+[Projetos Práticos com MarcoDB](https://www.amazon.com.br/dp/B0G1NJ3BKC)
 
 [Lucida-Flow - pypi org](https://pypi.org/project/lucidaflow)
 
@@ -10,91 +8,76 @@
 
 ______________________________________________________________________________________________
 
-## Usando o Terminal:
+Existem duas formas principais de interagir com o
+seu banco de dados MarcoDB: através do Shell
+Interativo (MQL) ou da Interface Gráfica (GUI).
 
-OBS:
+## O Shell Interativo (shell_interativo.py):
 
-Faça download do repositorio Lucida-Flow em uma pasta usando o terminal Windows ou o terminal do VScode:
+Como Iniciar:
+1. Abra seu terminal (PowerShell, CMD, etc.).
+2. Navegue até a pasta do projeto.
+3. Execute o script Python:
+Bash
+C:\..._banco_de_dados> python shell_interativo.py
+O que você verá:
+O shell será iniciado, informando qual arquivo de
+banco de dados está sendo usado.
+Bash
+INFO: Criando novo banco de dados
+'MarcoDB.db'...
+INFO: Criando novo banco de dados...
+Bem-vindo ao MarcoDB. Banco 'MarcoDB.db'
+aberto.
+Use a linguagem MQL (set, get, del) ou 'exit' para
+sair.
+MarcoDB> _
+O MarcoDB> é o prompt. Ele está aguardando que
+você digite um comando da linguagem MQL.
 
-```
-git clone https://github.com/marconeed/Lucida-Flow
-cd Lucida-Flow
-```
+## A Interface Gráfica (gui.py):
 
-OBS:
+A GUI (Graphical User Interface) é uma forma
+visual e mais amigável de manipular os dados,
+ideal para quando você quer inspecionar ou
+modificar chaves rapidamente sem digitar
+comandos.
+Como Iniciar:
+1. Abra seu terminal.
+2. Navegue até a pasta do projeto.
+3. Execute o script Python:
+Bash
+C:\..._banco_de_dados> python gui.py
+O que você verá:
+Uma janela será aberta, intitulada "MarcoDB
+Explorer".
+Diferente do shell, a GUI não abre um banco de
+dados automaticamente.
+1. Clique no botão "Abrir/Criar Banco".
+2. Uma caixa de diálogo pedirá o nome do
+arquivo. Digite MarcoDB.db (ou qualquer
+outro nome).
+3. Uma vez aberto, os botões "Inserir (Set)",
+"Buscar (Get)" e "Deletar" ficarão ativos.
+• Para Inserir: Digite a chave e o valor e
+clique em "Inserir".
+• Para Buscar: Digite apenas a chave e clique
+em "Buscar". O valor aparecerá na caixa
+"Valor".
+• Para Deletar: Digite a chave que deseja
+remover e clique em "Deletar"
 
-Baixe as dependencias usando o terminal Windows ou o terminal do VScode:
+## O Arquivo de Banco de Dados (.db):
 
-```pip install requests```   
-
-OBS:
-
-Para criar programas com interface grafica precisamos criar 2 arquivos o:
-
-O arquivo .py contendo os codigos para desenhar a interface grafica
-
-O arquivo .lf contendo os codigos da logica  do programa
-
-Os 2 arquivos precisam estar na raiz da linguagem de programação, onde fica todo o codigo da linguagem, ou você pode colocar em outros locais, mais tera que referenciar nos 2 arquivos as pastas onde estão as importações de que os 2 arquivos precisam para funcionar
-
-a linguagem contem codigos das guis usadas no livro, estão na raiz do projeto em uma pasta chamada gui, basta colocar as que for usar na raiz junto ao arquivo .lf. Se quiser deixar onde esta precisa mudar o caminho das importações dos 2 arquivos.
-
-OBS:
-
-Para executar basta colocar esse comando usando o terminal Windows ou o terminal do VScode na pasta onde esta os arquivos e lembrar de refenciar o arquivo .lf na nome-do-arquivo-gui_host.py:
-
-```python main.py nome_arquivo.lf```
-
-```python nome-do-arquivo-gui_host.py```
-
-
-## Usando o VS code:
-
-OBS:
-
-Faça download da estensão da linguagem para VS code
-
-```https://marketplace.visualstudio.com/items?itemName=SoteroApps.lucidaflow-support```
-
-OBS:
-
-Baixe as dependencias usando o terminal Windows ou o terminal do VScode:
-
-```pip install requests```   
-
-OBS:
-
-A extensão funciona para auxiliar na contrução do codigo com sugestões e constução da sytanxe sublinhando as palavras, fica melhor programar no VS code
-
-O VS code suporta executar o codigo direto nele nome_arquivo.lf, mais para porgramas de interface grafica tera que usar o terminal do VS code para dar o comando para executar. o comando é o mesmo ```python nome-do-arquivo-gui_host.py```
-
-
-## Usando o pypi org:
-
-OBS:
-
-Faça download da linguagem na pypi org
-
-```https://pypi.org/project/lucidaflow```
-
-```pip install lucidaflow```
-
-OBS:
-
-Usando a linguagem dessa forma você elimina a necessidade dos arquivos da linguagem estar na mesma pasta para funcionar, basta cria uma pasta vazia com o .lf e executar, ou nome-do-arquivo-gui_host.py + .lf e executar se for com interface grafica. Para executar o comando é ```python -m lucidaflow nome_arquivo.lf``` ou ```python nome-do-arquivo-gui_host.py```
-
-Usar dessa forma combinado com o VS code e a extensão funciona para auxiliar na contrução do codigo com sugestões e constução da sytanxe sublinhando as palavras, fica melhor programar no VS code
-
-Para executar no terminal Windows basta abrir o terminal windows na pasta onde esta o .lf e digitar ```python -m lucidaflow nome-do-arquivo.lf```, ou abrir o terminal windows na pasta onde esta o gui.py e digitar ```python nome-do-arquivo-gui_host.py`` se for com interface grafica
-
-Para executar no VS code basta apertar play para arquivos .lf. Para arquivo .lf e gui.py precisa ser usado o terminal do VS code ```python nome-do-arquivo-gui_host.py```
-
-
-## Ativar o REPL (em qualquer pasta do computador):
-
-transformar a sua linguagem numa ferramenta de linha de comando profissional
-
-```python -m lucidaflow.cli```
+É importante entender que tanto o
+shell_interativo.py quanto o gui.py estão
+trabalhando no mesmo arquivo.
+Se você usar o shell para set chave_A valor_shell e
+depois abrir a GUI e buscar por chave_A, ela
+encontrará o valor_shell.
+O arquivo (MarcoDB.db) é o seu banco de dados.
+As ferramentas são apenas as "portas" para
+acessá-lo.
 
 _____________________________________________________________________________________________________________________________________________________________________________
 
